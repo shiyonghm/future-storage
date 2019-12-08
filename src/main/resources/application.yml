@@ -1,0 +1,13 @@
+server:
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  # 指定运行环境
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10240MB
+      max-request-size: 10400MB

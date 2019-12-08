@@ -1,0 +1,48 @@
+spring:
+  # Redis配置
+  redis:
+    # Redis服务器地址
+    host: 172.16.0.104
+    # Redis服务器连接端口
+    port: 6888
+    # Redis数据库索引（默认为0）
+    database: 2
+    # Redis服务器连接密码（默认为空）
+    password:
+    # 连接超时时间（毫秒）
+    timeout: 6000ms
+    jedis:
+      # 连接池配置
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 2000ms
+        # 连接池中的最大空闲连接
+        max-idle: 30
+        # 连接池中的最小空闲连接
+        min-idle: 10
+    # redisson配置
+    redisson:
+      config: classpath:redisson-dev.yml
+  # MongoDB配置
+  data:
+    mongodb:
+      uri: mongodb://172.16.0.102:27017/riskraider_storage
+      username: ljzxdb
+      password: LENGjing1@34&
+fdfs:
+  # 获取文件超时时间（毫秒）
+  so-timeout: 15000
+  # 连接超时时间（毫秒）
+  connect-timeout: 6000
+  # 缩略图生成参数
+  thumb-image:
+    # 图片压缩后宽度
+    width: 200
+    # 图片压缩收高度
+    height: 200
+  # 如果有多个tracker节点可以添加多行
+  tracker-list:
+    - 172.16.0.102:22122
+    - 172.16.0.104:22122
