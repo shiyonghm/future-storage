@@ -18,7 +18,7 @@ public interface UserInfoRepository extends MongoRepository<UserInfo, String> {
      * @author shiyong
      * 2019-09-30 09:55
      * @param accessId 访问ID
-     * @return com.riskraider.storage.domain.UserInfo
+     * @return com.future.storage.domain.UserInfo
      */
     UserInfo findByAccessId(String accessId);
 }

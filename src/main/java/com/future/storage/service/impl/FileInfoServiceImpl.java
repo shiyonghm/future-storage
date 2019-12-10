@@ -4,8 +4,9 @@ import com.future.storage.dao.FileInfoRepository;
 import com.future.storage.domain.FileInfo;
 import com.future.storage.service.FileInfoService;
 import com.future.storage.utils.DateUtils;
-import org.springframework.data.annotation.Reference;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * 文件信息Service
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class FileInfoServiceImpl implements FileInfoService {
 
-    @Reference
+    @Resource
     private FileInfoRepository fileInfoRepository;
 
     /**

@@ -1,10 +1,10 @@
 package com.future.storage.utils;
 
 import com.future.storage.service.AuthorizationService;
-import org.springframework.data.annotation.Reference;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AuthorizationInterceptor implements HandlerInterceptor {
 
-    @Reference
+    @Resource
     private AuthorizationService authorizationService;
 
     /**

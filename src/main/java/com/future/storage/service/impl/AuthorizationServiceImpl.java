@@ -7,8 +7,9 @@ import com.future.storage.utils.DESUtils;
 import com.future.storage.utils.DateUtils;
 import com.future.storage.utils.MD5Utils;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.annotation.Reference;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * 认证授权Service
@@ -20,7 +21,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class AuthorizationServiceImpl implements AuthorizationService {
 
-    @Reference
+    @Resource
     private UserInfoService userInfoService;
 
     /**

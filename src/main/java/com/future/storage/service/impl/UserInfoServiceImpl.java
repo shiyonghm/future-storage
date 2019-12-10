@@ -6,8 +6,9 @@ import com.future.storage.service.UserInfoService;
 import com.future.storage.utils.BusinessException;
 import com.future.storage.utils.DateUtils;
 import com.future.storage.utils.UUIDUtils;
-import org.springframework.data.annotation.Reference;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * 用户信息Service
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Service;
 @Service("userInfoService")
 public class UserInfoServiceImpl implements UserInfoService {
 
-    @Reference
+    @Resource
     private UserInfoRepository userInfoRepository;
 
     /**

@@ -20,7 +20,7 @@ public interface FileInfoRepository extends MongoRepository<FileInfo, String> {
      * 2019-09-30 10:32
      * @param accessId 访问ID
      * @param fileName 文件名称
-     * @return com.riskraider.storage.domain.FileInfo
+     * @return com.future.storage.domain.FileInfo
      */
     FileInfo getFileInfoByAccessIdAndFileName(String accessId, String fileName);
 

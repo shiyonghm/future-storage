@@ -9,10 +9,10 @@ import com.future.storage.utils.FastDFSUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
-import org.springframework.data.annotation.Reference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,16 +29,16 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class FileStorageServiceImpl implements FileStorageService {
 
-    @Reference
+    @Resource
     private UserInfoService userInfoService;
 
-    @Reference
+    @Resource
     private FileInfoService fileInfoService;
 
-    @Reference
+    @Resource
     private FastDFSUtils fastDFSUtils;
 
-    @Reference
+    @Resource
     private RedissonClient redissonClient;
 
     /**
