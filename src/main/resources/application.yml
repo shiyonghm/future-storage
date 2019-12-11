@@ -6,7 +6,7 @@ server:
 spring:
   # 指定运行环境
   profiles:
-    active: dev
+    active: @activatedProperties@
   servlet:
     multipart:
       max-file-size: 10240MB

@@ -19,6 +19,35 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+    <!--配置不同的profile，对应不同的运行环境-->
+    <profiles>
+        <profile>
+            <!--开发-->
+            <id>dev</id>
+            <activation>
+                <!--默认开发环境-->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <!--测试-->
+            <id>test</id>
+            <properties>
+                <activatedProperties>test</activatedProperties>
+            </properties>
+        </profile>
+        <profile>
+            <!--生产-->
+            <id>release</id>
+            <properties>
+                <activatedProperties>release</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -68,6 +97,7 @@
 	</dependencies>
 
 	<build>
+        <finalName>storage</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
